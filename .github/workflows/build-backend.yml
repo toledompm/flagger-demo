@@ -20,7 +20,7 @@ jobs:
       - name: Validate git tag
         # check if tag is a valid color (blue, green, yellow, orange)
         run: |
-          if [[ ! ${{ github.ref }} =~ ^refs/tags/(blue|green|yellow|orange)$ ]]; then
+          if [[ ! ${{ github.ref }} =~ ^refs/tags/(grey|blue|green|yellow|orange)$ ]]; then
             echo "Tag ${{ github.ref }} is not a valid color tag"
             exit 1
           fi
