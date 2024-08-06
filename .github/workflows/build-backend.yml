@@ -54,7 +54,7 @@ jobs:
           context: ./backend
           platforms: linux/amd64,linux/arm64
           build-args: |
-            TAG=${{ github.ref }}
+            TAG=${{ github.ref_name }}
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
