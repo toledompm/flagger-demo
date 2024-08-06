@@ -19,7 +19,7 @@ func main() {
 
 	http.Handle("/", r)
 	fmt.Println("Server listening on port 8000")
-	originsOk := handlers.AllowedOrigins([]string{"http://localhost:3000"})
+	originsOk := handlers.AllowedOrigins([]string{"*"})
 	methodsOk := handlers.AllowedMethods([]string{"GET"})
 	http.ListenAndServe(":8000", handlers.CORS(originsOk, methodsOk)(r))
 }
